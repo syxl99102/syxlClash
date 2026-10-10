@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher"
+        android:shortcutId="check_panel_update"
+        android:shortcutLongLabel="@string/shortcut_update_long"
+        android:shortcutShortLabel="@string/shortcut_update_short">
+        <intent
+            android:action="com.syxl.zashboard.FORCE_UPDATE"
+            android:targetClass="com.syxl.zashboard.MainActivity"
+            android:targetPackage="com.syxl.zashboard" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 只放行本机内核的明文 HTTP（面板要请求 mihomo 的 API），其它域名仍强制 HTTPS -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+        <!-- 要连局域网里的内核就按同样格式加一行：
+        <domain includeSubdomains="false">192.168.1.10</domain>
+        -->
+    </domain-config>
+</network-security-config>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Zashboard 面板</string>
+    <string name="shortcut_update_short">更新面板</string>
+    <string name="shortcut_update_long">拉取最新 Zashboard</string>
+</resources>
