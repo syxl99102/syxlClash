@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 日间主题。
+         重点：网页里的 prefers-color-scheme 跟着 App 主题走，这里必须是 .Light 系列，
+         否则系统明明是日间，网页却会被告知是深色（Zashboard 会一直发黑）。 -->
+    <style name="AppTheme" parent="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+        <item name="android:windowBackground">@color/window_bg</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

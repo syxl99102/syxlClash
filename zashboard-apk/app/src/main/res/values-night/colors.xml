@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 夜间窗口底色，跟面板深色背景一致 -->
+    <color name="window_bg">#FF12151C</color>
+</resources>

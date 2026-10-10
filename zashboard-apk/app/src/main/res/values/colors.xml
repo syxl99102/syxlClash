@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 日间窗口底色（避免打开时白闪/黑闪） -->
+    <color name="window_bg">#FFFFFFFF</color>
+</resources>
