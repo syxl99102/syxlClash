@@ -8,6 +8,10 @@ on:
       - 'zashboard-apk/**'
       - '.github/workflows/build-apk.yml'
 
+# 发布 Release 需要写权限
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,7 +33,21 @@ jobs:
         working-directory: zashboard-apk
         run: gradle assembleDebug --no-daemon --stacktrace
 
-      - name: Upload APK
+      # 把 apk 直接发布到 Release：手机点开直链就能下到 apk（不是 zip）
+      - name: Publish APK to Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: apk
+          name: Zashboard 面板 APK（自动构建）
+          body: |
+            面板壳的最新构建：直接下载 app-debug.apk 安装即可。
+            应用内置 Zashboard 面板，并在每次启动时自动检查面板更新。
+          files: zashboard-apk/app/build/outputs/apk/debug/app-debug.apk
+          make_latest: true
+          overwrite_files: true
+
+      # 同时保留 Artifacts（备用）
+      - name: Upload APK (artifact)
         uses: actions/upload-artifact@v4
         with:
           name: zashboard-apk
